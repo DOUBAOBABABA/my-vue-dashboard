@@ -1,5 +1,8 @@
 <template>
-  <transition name="slide-in-right" enter-active-class="animated slideInRight">
+  <transition
+    name="slide-in-right"
+    enter-active-class="animate__animated animate__slideInRight"
+  >
     <div
       v-show="show"
       class="request"

@@ -1,23 +1,30 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home";
-import Team from "../views/Team";
+import vueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Team from "../views/Team.vue";
 import SignIn from "../views/SignInFlow/SignIn";
 import Request from "../views/SignInFlow/Request";
 import Recover from "../views/SignInFlow/Recover";
+import * as netlifyIdentityWidget from "netlify-identity-widget";
 
-Vue.use(VueRouter);
+Vue.use(vueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "home",
+    component: Home,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: "/team",
     name: "team",
-    components: Team
+    component: Team,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: "/signin",
@@ -27,19 +34,32 @@ const routes = [
   {
     path: "/request",
     name: "request",
-    components: Request
+    component: Request
   },
   {
     path: "/recover",
     name: "recover",
-    components: Recover
+    component: Recover
   }
 ];
 
-const router = new VueRouter({
+const router = new vueRouter({
+  routes,
   mode: "history",
-  base: process.env.BASE_URL,
-  routes
+  base: process.env.BASE_URL
+});
+
+router.beforeEach((to, from, next) => {
+  const currentUser = netlifyIdentityWidget.currentUser();
+  const requiresAuth = to.matched.some(record => {
+    return record.meta.requiresAuth;
+  });
+
+  if (requiresAuth && !currentUser) {
+    next("signin");
+  } else {
+    next();
+  }
 });
 
 export default router;
