@@ -60,8 +60,7 @@ export default {
       let slackURL = new URL("https://slack.com/api/chat.postMessage");
 
       const data = {
-        token:
-          "xoxp-1191291880882-1176549340951-1191115156661-77b11092961eb45681e61a421b4347d3",
+        token: "xoxb-1191291880882-1185799384566-pDOTxdOYTTs2dtS79oImqF8O",
         channel: "doubaoplusduck",
         text: `有新用户 ${email} 申请加入豆包+鸭啦，快去Netlify邀请他们！`
       };
