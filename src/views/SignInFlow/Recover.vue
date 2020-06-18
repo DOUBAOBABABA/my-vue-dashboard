@@ -7,7 +7,9 @@
     <div class="login">
       <img src="@/assets/doubaoya-dark.svg" v-show="isDarkMode" />
       <img src="@/assets/doubaoya-light.svg" v-show="!isDarkMode" />
-      <h4 :class="{ 'light-text': isDerkMode, 'dark-text': !isDarkMode }">请输入邮箱以发送重置密码链接</h4>
+      <h4 :class="{ 'light-text': isDerkMode, 'dark-text': !isDarkMode }">
+        请输入邮箱以发送重置密码链接
+      </h4>
       <form @submit.prevent="onSubmit">
         <input
           type="email"
@@ -26,7 +28,8 @@
       <router-link
         to="/signin"
         :class="{ 'light-link': isDarkMode, 'dark-link': !isDarkMode }"
-      >已经有账户了？现在登录</router-link>
+        >已经有账户了？现在登录</router-link
+      >
       <ThemeSwitch />
     </div>
   </div>

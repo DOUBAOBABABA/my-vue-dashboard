@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Team</h2>
+    <h2>团队</h2>
     <div class="cards">
       <transition
         appear

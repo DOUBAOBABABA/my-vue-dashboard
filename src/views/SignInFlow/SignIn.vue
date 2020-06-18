@@ -8,7 +8,9 @@
     <div class="login">
       <img src="@/assets/doubaoya-dark.svg" v-show="isDarkMode" />
       <img src="@/assets/doubaoya-light.svg" v-show="!isDarkMode" />
-      <h4 :class="{ 'light-text': isDerkMode, 'dark-text': !isDarkMode }">登录 DouBao+Duck</h4>
+      <h4 :class="{ 'light-text': isDerkMode, 'dark-text': !isDarkMode }">
+        登录 DouBao+Duck
+      </h4>
       <form @submit.prevent="onSubmit">
         <input
           type="email"
@@ -39,7 +41,8 @@
       <router-link
         to="/recover"
         :class="{ 'light-link': isDarkMode, 'dark-link': !isDarkMode }"
-      >忘记密码?</router-link>
+        >忘记密码?</router-link
+      >
       <ThemeSwitch />
     </div>
   </div>
@@ -108,14 +111,6 @@ export default {
 <style lang="scss" scoped>
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/typography.scss";
-
-.light-background {
-  background-color: $light-gray;
-}
-
-.dark-background {
-  background-color: $dark-blue;
-}
 
 .light-text {
   color: $white;
