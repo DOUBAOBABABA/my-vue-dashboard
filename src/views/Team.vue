@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header />
-    <h2>团队</h2>
+    <h2>协作工具</h2>
     <div class="cards">
       <transition appear appear-active-class="animate__animated animate__flipInX">
         <a class="card card-1" :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }">
