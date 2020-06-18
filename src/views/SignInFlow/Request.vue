@@ -6,9 +6,7 @@
     <div class="login">
       <img src="@/assets/doubaoya-dark.svg" v-show="isDarkMode" />
       <img src="@/assets/doubaoya-light.svg" v-show="!isDarkMode" />
-      <h4 :class="{ 'light-text': isDerkMode, 'dark-text': !isDarkMode }">
-        请输入注册邮箱账号
-      </h4>
+      <h4 :class="{ 'light-text': isDerkMode, 'dark-text': !isDarkMode }">请输入注册邮箱账号</h4>
       <form @submit.prevent="onSubmit">
         <input
           type="email"
@@ -27,8 +25,7 @@
       <router-link
         to="/signin"
         :class="{ 'light-link': isDarkMode, 'dark-link': !isDarkMode }"
-        >已经有账户了？现在登录</router-link
-      >
+      >已经有账户了？现在登录</router-link>
       <ThemeSwitch />
     </div>
   </div>
@@ -64,7 +61,7 @@ export default {
 
       const data = {
         token:
-          "xoxp-1191291880882-1176549340951-1176562446263-2c618ad1e6c8add57f901d2a882504d2",
+          "xoxp-1191291880882-1176549340951-1191115156661-77b11092961eb45681e61a421b4347d3",
         channel: "doubaoplusduck",
         text: `有新用户 ${email} 申请加入豆包+鸭啦，快去Netlify邀请他们！`
       };
