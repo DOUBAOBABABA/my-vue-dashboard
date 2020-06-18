@@ -2,9 +2,21 @@
   <div id="nav" :class="{ 'nav-light': !isDarkMode, 'nav-dark': isDarkMode }">
     <div class="nav-1">
       <img src="@/assets/doubaoya-small.svg" />
-      <router-link to="/" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">主页</router-link>
-      <router-link to="/manage" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">用户管理</router-link>
-      <router-link to="/team" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">协作工具</router-link>
+      <router-link
+        to="/"
+        :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
+        >主页</router-link
+      >
+      <router-link
+        to="/manage"
+        :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
+        >用户管理</router-link
+      >
+      <router-link
+        to="/team"
+        :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
+        >协作工具</router-link
+      >
     </div>
     <a @click="onClick">
       退出登录
