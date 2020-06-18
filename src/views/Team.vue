@@ -1,110 +1,61 @@
 <template>
   <div class="container">
+    <Header />
     <h2>团队</h2>
     <div class="cards">
-      <transition
-        appear
-        appear-active-class="animate__animated animate__flipInX"
-      >
-        <a
-          class="card card-1"
-          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
-        >
+      <transition appear appear-active-class="animate__animated animate__flipInX">
+        <a class="card card-1" :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }">
           <img
             src="@/assets/slack.png"
             class="card-header"
             :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
           />
-          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            Slack
-          </h3>
-          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            团队交流协作工具
-          </p>
+          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">Slack</h3>
+          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">团队交流协作工具</p>
         </a>
       </transition>
-      <transition
-        appear
-        appear-active-class="animate__animated animate__flipInX"
-      >
-        <a
-          class="card card-2"
-          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
-        >
+      <transition appear appear-active-class="animate__animated animate__flipInX">
+        <a class="card card-2" :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }">
           <img
             src="@/assets/notion.png"
             class="card-header"
             :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
           />
-          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            Slack
-          </h3>
-          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            从此以后只需要一本笔记
-          </p>
+          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">Notion</h3>
+          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">从此以后只需要一本笔记</p>
         </a>
       </transition>
-      <transition
-        appear
-        appear-active-class="animate__animated animate__flipInX"
-      >
-        <a
-          class="card card-3"
-          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
-        >
+      <transition appear appear-active-class="animate__animated animate__flipInX">
+        <a class="card card-3" :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }">
           <img
             src="@/assets/figma.png"
             class="card-header"
             :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
           />
-          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            Slack
-          </h3>
-          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            团队协作的轻型设计工具
-          </p>
+          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">Figma</h3>
+          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">团队协作的轻型设计工具</p>
         </a>
       </transition>
-      <transition
-        appear
-        appear-active-class="animate__animated animate__flipInX"
-      >
-        <a
-          class="card card-4"
-          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
-        >
+      <transition appear appear-active-class="animate__animated animate__flipInX">
+        <a class="card card-4" :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }">
           <img
             src="@/assets/dropbox.png"
             class="card-header"
             :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
           />
-          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            Slack
-          </h3>
-          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            最好用的云端存储空间
-          </p>
+          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">DropBox</h3>
+          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">最好用的云端存储空间</p>
         </a>
       </transition>
-      <transition
-        appear
-        appear-active-class="animate__animated animate__flipInX"
-      >
-        <a
-          class="card card-5"
-          :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }"
-        >
+      <transition appear appear-active-class="animate__animated animate__flipInX">
+        <a class="card card-5" :class="{ 'light-card': !isDarkMode, 'dark-card': isDarkMode }">
           <img
             src="@/assets/contentful.png"
             class="card-header"
             :class="{ 'light-header': !isDarkMode, 'dark-header': isDarkMode }"
           />
-          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            Slack
-          </h3>
-          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">
-            内容管理系统
-          </p>
+          <h3 :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">Contentful</h3>
+          <p :class="{ 'light-text': isDarkMode, 'dark-text': !isDarkMode }">内容管理系统</p>
         </a>
       </transition>
     </div>
@@ -112,12 +63,16 @@
 </template>
 
 <script>
+import Header from "@/components/Header.vue";
 export default {
   name: "Team",
   computed: {
     isDarkMode() {
       return this.$store.getters.isDarkMode;
     }
+  },
+  components: {
+    Header
   }
 };
 </script>

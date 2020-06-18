@@ -4,10 +4,7 @@
     <div class="container">
       <div class="spread">
         <h1 :class="{ dark: !isDarkMode, light: isDarkMode }">使用情况</h1>
-        <div
-          class="toggle"
-          :class="{ 'light-box': isDarkMode, 'dark-box': !isDarkMode }"
-        >
+        <div class="toggle" :class="{ 'light-box': isDarkMode, 'dark-box': !isDarkMode }">
           <div ref="days" class="days" @click="toggleDays">日</div>
           <div ref="weeks" class="weeks" @click="toggleWeeks">周</div>
           <div ref="months" class="months" @click="toggleMonths">月</div>
@@ -106,7 +103,7 @@ export default {
         legend: {
           height: 40,
           fontSize: "18px",
-          horizontalAlign: "left",
+          horizontalAlign: "center",
           labels: {
             colors: [this.$store.getters.isDarkMode ? "white" : "black"]
           },
@@ -137,6 +134,7 @@ export default {
       series: []
     };
   },
+
   methods: {
     toggleDays() {
       this.$refs.days.style.color = "white";
@@ -155,6 +153,7 @@ export default {
       const newUsers = [];
 
       // Binding Docs
+
       this.$binding("activeUsers", db.collection("traffic").doc("activeUsers"))
         .then(data => {
           const todaysDate = new Date();
@@ -188,11 +187,11 @@ export default {
 
       this.series = [
         {
-          name: "active users",
+          name: "活跃用户",
           data: activeUsers
         },
         {
-          name: "new users",
+          name: "新增用户",
           data: newUsers
         }
       ];
@@ -248,11 +247,11 @@ export default {
 
       this.series = [
         {
-          name: "active users",
+          name: "活跃用户",
           data: activeUsers
         },
         {
-          name: "new users",
+          name: "新增用户",
           data: newUsers
         }
       ];
@@ -307,11 +306,11 @@ export default {
 
       this.series = [
         {
-          name: "active users",
+          name: "活跃用户",
           data: activeUsers
         },
         {
-          name: "new users",
+          name: "新增用户",
           data: newUsers
         }
       ];
