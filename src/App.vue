@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="app"
-    :class="{ 'light-background': !isDarkMode, 'dark-background': isDarkMode }"
-  >
+  <div id="app" :class="{ 'light-background': !isDarkMode, 'dark-background': isDarkMode }">
     <router-view />
   </div>
 </template>
@@ -19,7 +16,7 @@ export default {
   },
   mounted() {
     const isDarkMode = this.$store.getters.isDarkMode;
-    document.body.style.background = isDarkMode ? "#212c4f" : "#f0f3f5";
+    document.body.style.background = isDarkMode ? "#212c4f" : "#f8f9fa";
   }
 };
 </script>
@@ -82,6 +79,11 @@ input {
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.3);
+  }
+  &:focus {
+    border: 1px solid $blue;
+    box-shadow: 0 0 0 1px $blue;
+    outline: none;
   }
 }
 

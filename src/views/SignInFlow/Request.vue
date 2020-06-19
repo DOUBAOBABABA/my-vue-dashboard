@@ -61,7 +61,7 @@ export default {
 
       const data = {
         token:
-          "xoxp-1191291880882-1176549340951-1191258738277-aaf651a055b1ad6004caa2c86af6fcab",
+          "xoxp-1191291880882-1176549340951-1187079819494-bbef8afdcf0ae0ae3e48a9c5724c9afe",
         channel: "doubaobabaduck",
         text: `有新用户 ${email} 申请加入豆包+鸭啦，快去Netlify邀请他们！`
       };

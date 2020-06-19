@@ -4,10 +4,7 @@
     <div class="container">
       <div class="spread">
         <h1 :class="{ dark: !isDarkMode, light: isDarkMode }">使用情况</h1>
-        <div
-          class="toggle"
-          :class="{ 'light-box': isDarkMode, 'dark-box': !isDarkMode }"
-        >
+        <div class="toggle" :class="{ 'light-box': isDarkMode, 'dark-box': !isDarkMode }">
           <div ref="days" class="days" @click="toggleDays">日</div>
           <div ref="weeks" class="weeks" @click="toggleWeeks">周</div>
           <div ref="months" class="months" @click="toggleMonths">月</div>

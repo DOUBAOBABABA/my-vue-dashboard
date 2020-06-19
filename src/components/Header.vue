@@ -2,21 +2,9 @@
   <div id="nav" :class="{ 'nav-light': !isDarkMode, 'nav-dark': isDarkMode }">
     <div class="nav-1">
       <img src="@/assets/doubaoya-small.svg" />
-      <router-link
-        to="/"
-        :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
-        >主页</router-link
-      >
-      <router-link
-        to="/manage"
-        :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
-        >用户管理</router-link
-      >
-      <router-link
-        to="/team"
-        :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }"
-        >协作工具</router-link
-      >
+      <router-link to="/" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">主页</router-link>
+      <router-link to="/manage" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">用户管理</router-link>
+      <router-link to="/team" :class="{ 'light-nav': !isDarkMode, 'dark-nav': isDarkMode }">协作工具</router-link>
     </div>
     <a @click="onClick">
       退出登录
@@ -60,10 +48,12 @@ export default {
 @import "@/global-styles/colors.scss";
 @import "@/global-styles/typography.scss";
 .nav-light {
-  background: $white;
+  background: #f0f3f5;
+  box-shadow: 1px 3px 20px 4px #c6d0eb59;
 }
 .nav-dark {
   background: $super-dark-blue;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 #nav {
